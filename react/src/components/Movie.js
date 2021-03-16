@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
-const MovieContainer = styled.article`
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+const MovieCard = styled.article`
+  width: 500px;
+  border: 1px solid black;
   padding: 2rem 3rem;
+  justify-self: center;
+  background-color: ${({ theme }) => theme.background.card};
 `;
 
 const MovieTitle = styled.h2`
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.2;
   font-weight: 900;
   margin-bottom: 1.6rem;
@@ -14,15 +17,16 @@ const MovieTitle = styled.h2`
 `;
 
 const MovieActor = styled.h4`
-  font-size: 1.3rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.default};
 `;
 
 const Movie = ({ title, actor }) => (
-  <MovieContainer>
-    <MovieTitle>{title}</MovieTitle>
-    <MovieActor>{actor}</MovieActor>
-  </MovieContainer>
+  <MovieCard>
+    <MovieTitle>Movie: {title}</MovieTitle>
+    <MovieActor>Actor: {actor}</MovieActor>
+  </MovieCard>
 );
 
 export default Movie;

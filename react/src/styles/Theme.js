@@ -2,10 +2,10 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './Global';
 
 const theme = {
-  body: '#FFF',
-  text: '#363537',
   background: {
-    bgn: 'lightgray',
+    main: 'lightgray',
+    movies: 'whitesmoke',
+    card: 'white',
   },
   colors: {
     default: '#333',

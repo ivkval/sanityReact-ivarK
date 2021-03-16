@@ -64,4 +64,8 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 1.6rem;
     }
   }
+  /* extra, do not copy with the rest */
+  html, body {
+    height: 100%;
+  }
 `;
