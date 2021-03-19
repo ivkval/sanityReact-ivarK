@@ -18,6 +18,7 @@ const Movies = () => {
     setError(null);
     try {
       const movies = await getMovie();
+      console.log(movies);
       setData(movies);
     } catch (error) {
       setData([]);
